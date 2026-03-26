@@ -1,0 +1,36 @@
+<!-- write a function that take an array of number and  return the largest number using while loop -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Find Largest Number in Array</h2>
+<p id="demo"></p>
+
+<script>
+
+function findLargest(arr) {
+    let i = 0;
+    let largest = arr[0];  
+
+    while (i < arr.length) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+        i++;
+    }
+
+    return largest;
+}
+
+let numbers = [10, 45, 78, 23, 99, 12];
+let result = findLargest(numbers);
+
+document.getElementById("demo").innerHTML =
+    "Largest number is: " + result;
+
+</script>
+
+</body>
+</html>
