@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas and SVG Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #0984e3;
+            background: #eef7ff;
+        }
+
+        svg {
+            border: 2px solid #6c5ce7;
+            background: #f8f6ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Canvas and SVG Elements Demo</h2>
+
+<div class="container">
+
+    
+    <div class="box">
+        <h3>Canvas Graphics</h3>
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <p>Canvas uses JavaScript to draw graphics.</p>
+    </div>
+
+    <div class="box">
+        <h3>SVG Graphics</h3>
+
+        <svg width="300" height="200">
+            <rect x="20" y="20" width="100" height="60" fill="#6c5ce7" />
+            <circle cx="200" cy="60" r="30" fill="#00b894" />
+            <line x1="50" y1="150" x2="250" y2="150" stroke="red" stroke-width="3"/>
+            <text x="90" y="190" fill="#2d3436" font-size="14">
+                SVG Example
+            </text>
+        </svg>
+
+        <p>SVG elements are scalable and editable.</p>
+    </div>
+
+</div>
+
+<script>
+    
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+
+    ctx.fillStyle = "#0984e3";
+    ctx.fillRect(20, 20, 100, 60);
+
+
+    ctx.beginPath();
+    ctx.arc(200, 60, 30, 0, Math.PI * 2);
+    ctx.fillStyle = "#00b894";
+    ctx.fill();
+
+    
+    ctx.beginPath();
+    ctx.moveTo(50, 150);
+    ctx.lineTo(250, 150);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+
+    ctx.fillStyle = "#2d3436";
+    ctx.font = "14px Arial";
+    ctx.fillText("Canvas Example", 85, 190);
+    
+</script>
+
+</body>
+</html>
