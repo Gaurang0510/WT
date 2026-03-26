@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cookies Example</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+</style>
+
+<script>
+
+function createCookie() {
+    var name = prompt("Enter your name:");
+    
+    var days = 7;
+    var date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    var expires = "expires=" + date.toUTCString();
+
+    document.cookie = "username=" + name + ";" + expires + ";path=/";
+
+    alert("Cookie created successfully!");
+}
+
+function getCookie() {
+    var cookies = document.cookie;
+
+    if (cookies != "") {
+        alert("Stored Cookie: " + cookies);
+    } else {
+        alert("No cookie found");
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Cookie Creation and Retrieval</h2>
+
+<button onclick="createCookie()">
+Create Cookie
+</button>
+
+<button onclick="getCookie()">
+Retrieve Cookie
+</button>
+
+</body>
+</html>
