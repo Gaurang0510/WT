@@ -1,0 +1,33 @@
+<!-- write a function that prints thefibonacci sequence up to nth number -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fibonacci Sequence</h2>
+<p id="demo"></p>
+
+<script>
+
+function printFibonacci(n) {
+    let a = 0, b = 1;
+    let result = "";
+
+    for (let i = 1; i <= n; i++) {
+        result += a + " ";
+
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+
+    return result;
+}
+
+let output = printFibonacci(10);
+document.getElementById("demo").innerHTML = output;
+
+</script>
+
+</body>
+</html>
