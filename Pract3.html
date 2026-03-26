@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #74b9ff, #a29bfe);
+            font-family: Arial, sans-serif;
+        }
+
+        .form-box {
+            width: 360px;
+            background: #ffffff;
+            padding: 25px;
+            margin: 60px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2f3640;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 9px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #b2bec3;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #6c5ce7;
+            box-shadow: 0 0 5px #6c5ce7;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            background: linear-gradient(to right, #6c5ce7, #0984e3);
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+    <h2>Registration Form</h2>
+
+ <form action="Success.html">
+
+        
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Mobile</label>
+        <input type="tel" placeholder="Enter mobile number" required>
+
+        <label>Address</label>
+        <textarea placeholder="Enter your address" rows="3" required></textarea>
+
+        <button type="submit">Register</button>
+        
+    </form>
+</div>
+
+</body>
+</html>
