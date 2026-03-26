@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Variables</h1>
+
+<p>In this example, x, y, and z are variables.</p>
+
+<input id="value" type="text" required>
+<input type="button" value="Click Me" onclick="showValue()">
+
+<h2>Value</h2>
+<p id="demo"></p>
+
+<script>
+
+function showValue() {
+    let inputValue = document.getElementById("value").value;
+    document.getElementById("demo").innerHTML = 
+        "The value entered by user is: " + inputValue;
+}
+
+</script>
+
+</body>
+</html>
