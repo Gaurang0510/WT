@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #667eea;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.definition {
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+  text-align: center;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.content-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.link-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.link-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+ul, ol {
+  margin-left: 30px;
+  margin: 20px 0;
+}
+
+li {
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+.section-title {
+  color: #667eea;
+  font-size: 1.5em;
+  margin: 30px 0 15px 0;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+iframe {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+}
+
+.button-group {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+  
+  table {
+    font-size: 0.9em;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🖥️ Microprocessors</h1>
+    <div class="definition" id="defi">
+      A microprocessor is a compact, multipurpose integrated circuit (IC) that acts as the central processing unit (CPU) of a computer, containing arithmetic, logic, and control functions on a single chip to fetch, decode, and execute instructions from binary data, forming the "brain" for devices like PCs, smartphones, and servers.
+    </div>
+  </header>
+
+  <div class="content-section">
+    <div style="text-align: center;">
+      <img src="images.jpeg" alt="Microprocessor image" width="350" height="300">
+    </div>
+    <div class="button-group">
+      <a class="link-button" href="https://www.geeksforgeeks.org/electronics-engineering/introduction-of-microprocessor/" target="_blank">📚 Learn More About Microprocessors</a>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2 class="section-title">👥 Developer Information</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Best Language</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>Parth</td>
+        <td>C++</td>
+        <td>8.3</td>
+      </tr>
+      <tr>
+        <td>Soham</td>
+        <td>Java</td>
+        <td>9.0</td>
+      </tr>
+      <tr>
+        <td>Rahul</td>
+        <td>Python</td>
+        <td>9.2</td>
+      </tr>
+      <tr>
+        <td>Aniket</td>
+        <td>C</td>
+        <td>8.9</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="content-section">
+    <h2 class="section-title">☕ Beverages - Unordered List</h2>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2 class="section-title">📝 Beverages - Ordered List</h2>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+  </div>
+
+  <div class="content-section">
+    <h2 class="section-title">🔗 Embedded Content</h2>
+    <p style="text-align: center; margin-bottom: 20px;">Below is an embedded webpage showcasing additional content:</p>
+    <iframe src="Pract1.html" height="500" title="Iframe Example"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
