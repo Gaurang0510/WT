@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Array</h1>
+
+<p>Click the button to print the sum of array:</p>
+<input type="button" value="Click Me" onclick="showValue()">
+
+<h2>Value</h2>
+<p id="demo"></p>
+
+<script>
+
+let arr = [10,20,30,40,50,60];
+let sum = 0;
+
+for(let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+}
+
+function showValue() {
+    document.getElementById("demo").innerHTML = 
+        "The sum of array is: " + sum;
+}
+
+</script>
+
+</body>
+</html>
